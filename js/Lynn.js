@@ -34,5 +34,11 @@ $(document).ready(function(){
         lastScrollTop = scrollTop;
     }
 
+    $(".footer > .top").click(function(e){
+        e.preventDefault();
+        $("html,body").stop().animate({scrollTop : 0},800);
+
+    });
+
 
 });

@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+/* 21.11.02 */
+
 body{font-family: 'Noto Sans KR', sans-serif;}
 
 /* layout */
@@ -8,7 +10,11 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 #main{}
 #section1{width: 100%;height: 100vh; background: #f1ede8; position: relative;}
 #section2{width: 100%;height: 500px; background: #252525;}
-#footer{}
+#section3{width: 100%;height: 100vh; background: #fff;}
+#section4{width: 100%;height: 600px; background: #f1ede8;}
+#section5{width: 100%;height: 650px; background: #fff;}
+#section6{width: 100%;height: 300px; background: #f1ede8;}
+#footer{width: 100%;height: 300px; background: #252525;}
 
 /* 가운데 영역 */
 .container{max-width: 1600px; margin: 0 auto;}
@@ -21,7 +27,8 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .header .sns ul li{margin: 12px 0;}
 .header .sns ul li a{}
 .header .sns ul li a em{}
-.header .sns ul li a em i{font-size: 30px;color: #353535;}
+.header .sns ul li a em i{font-size: 30px;color: #353535; transition: all 0.2s;}
+.header .sns ul li:hover a em i {color: #F5515F;}
 
 /* 이미지 슬라이드 */
 .slider .slide{width: 100%;height: 100vh;position: relative;}
@@ -45,22 +52,26 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .slider .slick-active .slide1 figure .img2 strong{transition-delay: 0s;}
 
 
-.slider figcaption {position: absolute; top: 50%; left: 180px;width: 100%; transform: translateY(-50%);}
+.slider figcaption {position: absolute; top: 50%; left: 180px; transform: translateY(-50%);}
 .slider figcaption ul{}
-.slider figcaption ul li{transform: translateX(20%); opacity: 0; transition: all 1.2s ease-in;}
+.slider figcaption ul li{transform: translateX(20%); opacity: 0; transition: all 1.2s ease-in;display: block;}
 .slider .slick-active figcaption ul li {transform: translate(0%); opacity: 1;}
-.slider .slick-active figcaption ul li:nth-child(2){transition-delay: 0.2s;}
-.slider .slick-active figcaption ul li:nth-child(3){transition-delay: 0.4s;}
+.slider .slick-active figcaption ul li:nth-child(2){transition-delay: 0.4s;}
+.slider .slick-active figcaption ul li:nth-child(3){transition-delay: 0.8s;}
 
 .slider .slick-active .slide1 figcaption ul li:nth-child(2){transition-delay: 0s;}
 .slider .slick-active .slide1 figcaption ul li:nth-child(3){transition-delay: 0s;}
 
-.slider figcaption ul li em{font-size: 70px; font-weight: bold; color: #353535; text-transform: uppercase;}
+.slider figcaption ul li em{font-size: 70px; font-weight: bold; color: #353535; text-transform: uppercase; transition: all 0.2s ease-in-out;}
+.slider figcaption ul li:hover em{color: #F5515F;}
 
 .slider .slick-prev {position: absolute; left: 180px;bottom: 100px;z-index: 1000; width: 60px;height: 60px; background: rgba(0, 0, 0, 0); display: inline-block; text-indent: -9999px; font: normal normal normal 14px/1 FontAwesome;}
-.slider .slick-prev:before {cursor: pointer; content: "\f053"; color: #555555; text-indent: 0; position: absolute; left: 5px; top: 5px; font-size: 60px;}
+.slider .slick-prev:before {cursor: pointer; content: "\f053"; color: #555555; text-indent: 0; position: absolute; left: 5px; top: 5px; font-size: 60px; transition: all 0.2s;}
 .slider .slick-next {position: absolute; left: 310px; bottom: 100px;z-index: 1000; width: 60px;height: 60px; background: rgba(0, 0, 0, 0); display: inline-block; text-indent: -9999px; font: normal normal normal 14px/1 FontAwesome;}
-.slider .slick-next:before {cursor: pointer; content: "\f054"; color: #555555; text-indent: 0; position: absolute; right: 5px; top: 5px; font-size: 60px;}
+.slider .slick-next:before {cursor: pointer; content: "\f054"; color: #555555; text-indent: 0; position: absolute; right: 5px; top: 5px; font-size: 60px; transition: all 0.2s;}
+
+.slider .slick-prev:hover:before{color: #F5515F;}
+.slider .slick-next:hover:before{color: #F5515F;}
 
 /* section1 */
 .section1{height: 100vh; display: flex; justify-content: center;}
@@ -71,11 +82,68 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .section1 .text_box p{font-size: 20px;font-weight: 400; color: #353535; margin-top: 30px; line-height: 32px;}
 
 .section1 .img_box{width: 500px;height: 650px; margin-top: 30px; background: url(../img/main/section1_1.jpg) no-repeat top / cover;}
-
 .section1 .img2_box{width: 500px;height: 300px; background: #111; position: absolute; bottom: 50px;left: 51%; transform: translateX(-50%); background: url(../img/main/section1_2.jpg) no-repeat top / cover; z-index: 10;}
 
+/* section2 */
+.section2{height: 500px; display: flex; justify-content: center; align-items: center; position: relative; }
+.section2 p{font-size: 30px;font-weight: 400; color: #fff; text-align: center; font-style: italic;}
+.section2 .line3{display: block; width: 500px;height: 3px; background: #fff; position: absolute; bottom: 130px; right: 0;}
 
+/* section3 */
+.section3{height: 100vh; display: flex; justify-content: center; }
+.section3 .item{width: 450px;height: 650px;  position: relative; margin: 70px 30px 0;}
+.section3 .item .img_box{width: 450px;height: 650px; background: #ccc; overflow: hidden;}
+.section3 .item .img_box img{width: 450px;height: 650px; object-fit: cover; transition: all 0.6s ease-in-out;}
+.section3 .item:hover .img_box img{transform: scale(1.2);}
 
+.section3 .item .text_box{width: 400px;height: 250px; background: #252525; position: absolute; bottom: -150px; left: 50%; transform: translateX(-50%); text-align: center;}
+.section3 .item .text_box ul{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 100%;}
+.section3 .item .text_box ul li{color: #fff;}
+.section3 .item .text_box ul li strong{font-size: 60px;font-weight: 600;}
+.section3 .item .text_box ul li em{font-size: 20px;font-weight: 400;margin: 15px 0 10px; display: block;}
+.section3 .item .text_box ul li p{font-size: 16px; font-weight: 300;}
 
+/* section4 */
+.section4{display: flex; justify-content: center; position: relative;}
+.section4 .img_box{width: 550px;height: 900px; background: #ccc; margin-top: 70px; background: url(../img/main/section4_1.jpg) no-repeat center / cover; position: relative;}
+.section4 .img_box em{font-size: 50px; font-weight: 400; color: #c59f66; position: absolute; bottom: -80px; right: 0;}
+.section4 .text_box{width: 530px;height: 300px;margin: 180px 0 0 150px; text-align: center;}
+.section4 .text_box h2{font-size: 25px;font-weight: 600; color: 000;}
+.section4 .text_box p{font-size: 20px;font-weight: 400; margin-top: 50px;}
 
+.section4 .line4{width: 3px;height: 130px;background: #555555; opacity: 0.8; display: block; position: absolute; top: 0; right: 450px;}
+.section4 .line5{width: 3px;height: 560px;background: #555555; opacity: 0.8; display: block; position: absolute; top: 510px; right: 450px;}
 
+/* section5 */
+.section5{display: flex; justify-content: center;}
+.section5 p{font-size: 20px; font-weight: 400; color: #555555; margin-top: 490px;}
+
+/* section6 */
+.section6{position: relative;}
+.section6 h2{font-size: 35px;font-weight: 600; color: #555;text-align: center; padding-top: 80px;}
+.section6 .cont{margin-top: 50px;}
+.section6 .cont ul{display: flex; justify-content: center;}
+.section6 .cont ul li{text-align: center; margin: 0 15px;}
+.section6 .cont ul li a{width: 350px; padding: 5px 0; display: block; border: 3px solid #555555; transition: all 0.3s;}
+.section6 .cont ul li:hover a{border: 3px solid #F5515F;}
+.section6 .cont ul li a em{font-size: 25px; font-weight: 400; color: #555; transition: all 0.2s;}
+.section6 .cont ul li:hover a em{color: #F5515F;}
+
+.section6 .line6{width: 400px;height: 3px; background: #555555; opacity: 0.8; display: block; position: absolute; top: 80px;left: 0;}
+.section6 .line7{width: 250px;height: 3px; background: #555555; opacity: 0.8; display: block; position: absolute; top: 240px;right: 0;}
+
+/* footer */
+.footer{position: relative;}
+.footer .logo{text-align: center;padding: 40px 0 30px;}
+.footer .logo img{width: 250px;height: 81px;object-fit: cover;}
+.footer .line8{width: 100%;height: 1px;background: #d8d7d2; display: block;}
+.footer .text_box{display: flex; justify-content: center; margin-top: 30px;}
+.footer .text_box .item{margin: 0 50px;}
+.footer .text_box .item ul{}
+.footer .text_box .item ul li{}
+.footer .text_box .item ul li em{font-size: 17px; font-weight: 400; color: #fff;}
+
+.footer .top{width: 40px;height: 40px; position: absolute; top: 190px; right: 290px;}
+.footer .top a{width: 100%;height: 100%; background: #fff; display: block;  position: relative;}
+.footer .top a i{font-size: 25px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+.footer .top:hover a{color: #F5515F;}

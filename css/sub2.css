@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+/* 21.11.03 */
+
+body{font-family: 'Noto Sans KR', sans-serif;}
+
+/* layout */
+
+
+/* 가운데 영역 */
+.container{max-width: 1600px; margin: 0 auto;}
+
+
+
+
+

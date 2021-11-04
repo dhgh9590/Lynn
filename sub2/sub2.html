@@ -14,26 +14,139 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
     <script src="../js/slick.min.js"></script>
     <script src="../js/Lynn.js"></script>
-    <script src="../js/gsap.js"></script>
 </head>
-<!-- 21.11.03 -->
+<!-- 21.11.04 -->
 <body>
     <? include "../nav/nav.html";?>
 
-    <header id="header"></header>
-    <!-- //header -->
-
     <main id="main">
-        <section id="section1"></section>
+        <section id="section1">
+            <div class="container">
+                <div class="section1">
+                    <!-- 이미지 슬라이드 -->
+                    <div class="slider">
+                        <div class="slide slide1">
+                            <figure>
+                                <div class="img1">
+                                    <div class="text">
+                                        <em>Woo Do-Hwan</em>
+                                        <strong>
+                                            Hanbok<br>
+                                            Lynn
+                                        </strong>
+                                    </div>
+                                </div>
+                                <div class="img2_box">
+                                    <div class="item1 item"></div>
+                                    <div class="item2 item"></div>
+                                    <div class="item3 item"></div>
+                                </div>
+                                <figcaption>
+                                    <p>
+                                        In every aspect of our lives,<br>
+                                        we are always asking ourselves,<br>
+                                        How am I of value? What is my worth?<br>
+                                        Yet I believe that worthiness is<br>
+                                        our birthright.
+                                    </p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="slide slide2">
+                            <figure>
+                                <div class="img1">
+                                    <div class="text">
+                                        <em>Lee Young-ae</em>
+                                        <strong>
+                                            Hanbok<br>
+                                            Lynn
+                                        </strong>
+                                    </div>
+                                </div>
+                                <div class="img2_box">
+                                    <div class="item1 item"></div>
+                                    <div class="item2 item"></div>
+                                    <div class="item3 item"></div>
+                                </div>
+                                <figcaption>
+                                    <p>
+                                        If you wish success in life,<br>
+                                        make perseverance your bosom friend,<br>
+                                        experience your wise counselor,<br>
+                                        caution your elder brother and<br>
+                                        hope your guardian genius.
+                                    </p>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                    </div>
+                    <!-- //이미지 슬라이드 -->
+                    <div class="left_text">
+                        <em>MODERN&TRENDY</em>
+                    </div>
+                    <div class="right_text">
+                        <em>Whatever you do, do cautiously, and look to the end.</em>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- //section1 -->
+
+        <section id="section2">
+            <div class="container">
+                <div class="section2">
+                    <h2>
+                        behind the<br>
+                        scene
+                    </h2>
+                    <div class="cont">
+                        <div class="img_box"></div>
+                        <div class="text_box">
+                            <h3>Why Layers of Living</h3>
+                            <p>
+                                I would rather fail in a<br>
+                                cause that will ultimately<br>
+                                triumph than to triumph in a<br>
+                                cause that will ultimately fail.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section2 -->
 
     </main>
     <!-- //main -->
 
     <? include "../footer/footer.html";?>
+
+    <script>
+        $(window).ready(function(){
+            $(".slider figcaption").css({transitionDelay: 0});
+        });
+        
+
+        $(".slider").slick({
+            dots: false,
+            autoplay: false,
+            autoplaySpeed: 5000,
+            speed:1100,
+            arrows: true,
+            fade: true,
+            cssEase: 'linear',
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        autoplay:false,
+                        }
+                }
+            ]
+        });
+    </script>
 </body>
 </html>
